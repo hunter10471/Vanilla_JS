@@ -46,6 +46,8 @@ class UI{
         newdiv.className = `alert alert-${className}`
         newdiv.appendChild(document.createTextNode(msg))
         container.insertBefore(newdiv,div)
+
+        //remove alert after 2 seconds
         setTimeout(()=>{
             container.removeChild(newdiv)
         },2000)
