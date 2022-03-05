@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.png" type='image/png'>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div>
+            <h1 class="logo">
+                <i class="ri-sun-foggy-fill" style="background-color: #252422; color: #EB5E28;"></i>
+                WeatherApp
+            </h1>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="left-container">
+            <h2 id="temp">
+                16°
+            </h2>
+            <div class="city-details">
+                <h3 id="city">
+                    Karachi
+                </h3>
+                <p id="time">09:30-Saturday, 9 Oct '22</p>
+            </div>
+            <div class="weather-symbols">
+               <img src="https://cdn.weatherapi.com/weather/64x64/day/143.png" id="weather-symbols" alt="weather-symbol">
+                <p id="weather-text">Sunny</p>
+            </div>
+        </div>
+        <div class="right-container">
+                <div class="right-containerInput" >
+                    <input type="text" id="input" placeholder="Enter location">
+                   <div class="line"></div>
+                    <div onclick="weather.getCity()" class="search-icon">
+                     <i class="ri-search-line"></i>
+                    </div>
+                </div>
+                <div class="recent-searches" id="recent-searches">
+                    <h2>Recent searches</h2>
+                    <p id="search_1" onclick="weather.getWeather(this.id)">Moscow</p>
+                    <p id="search_2" onclick="weather.getWeather(this.id)">Islamabad</p>
+                    <p id="search_3" onclick="weather.getWeather(this.id)">New York</p>
+                </div>
+                <div class="weather-details">
+                    <h2>Weather Details</h2>
+                    <p><i class="ri-cloudy-2-line"></i>Cloud <span id="cloud">10%</span></p>
+                    <p><i class="ri-drop-line"></i>Humidity <span id="humidity">56%</span></p>
+                    <p><i class="ri-windy-line"></i>Wind <span id="wind">56 Kph</span></p>
+                    <p><i class="ri-eye-2-line"></i>Visibility <span id="visibility">10 km</span></p>
+                </div>
+                <a href="www.weatherapi.com">API powered by weatherAPI.</a>
+            </div>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
