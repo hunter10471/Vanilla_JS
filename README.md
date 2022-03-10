@@ -40,9 +40,11 @@ Enter any query you might have in the search box on the navbar to fetch your res
 - overview or plot
 
 ### Dark-mode
-![]()
+![](https://github.com/hunter10471/Vanilla_JS/blob/master/The_Film_Guide/images/The_film_guide.png)
 
 ### Light-mode
-![]()
+![](https://github.com/hunter10471/Vanilla_JS/blob/master/The_Film_Guide/images/The_film_guide2.png)
 
+### Info-modal
+![](https://github.com/hunter10471/Vanilla_JS/blob/master/The_Film_Guide/images/The_film_guide_modal.png)
 
