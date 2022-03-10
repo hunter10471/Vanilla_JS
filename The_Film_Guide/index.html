@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>The Film Guide</title>
+</head>
+<body id="body">
+    <nav>
+        <h1>
+            <i class="ri-guide-line"></i>FilmGuide
+        </h1>
+        <ul>
+            <li id="movies">Movies</li>
+            <li id="tv-shows">TV Shows</li>
+            <li id="animated">Kids</li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search">
+            <i onclick="searchMovies()" type="submit" class="ri-search-line"></i>
+            <div class="mode">
+                <span onclick="changeMode()"><i class="ri-sun-line sun"></i><button id="mode-btn"  value="0"></button><i class="ri-moon-line moon"></i></span>
+            </div>
+        </div>
+    </nav>
+    <div  class="main-body">
+        <div class="poster">
+            <img id="poster-img" src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80" alt="">
+            <span><i class="ri-eye-fill"></i> 1.7k+ people watching this</span>
+            <h1 id="poster-h1">THE MUSICAL CAFE</h1>
+            <button><i class="ri-play-circle-line"></i> Watch Now</button>
+        </div>
+        <div class="trending-container">
+            <h2 class="trending">Latest Shows</h2>
+            <div id="card-container" class="card-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1646607796792-779ffefdd1b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+                    <h1>Hulk</h1>
+                    <span><i class="ri-star-line"></i> 4.7</span>
+                    <div id="card-hover" class="card-hover">
+                        <div class="icons" onclick="modal.open()">
+                            <i class="ri-information-line" id="0" ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="modal-bg" class="">
+        <div class="modal inactive" id="modal">
+            <i class="ri-close-line cross" onclick="modal.close()"></i>
+            <img src="https://images.unsplash.com/photo-1644907961094-8852aca773d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="">
+            <h2>Hulk</h2>
+            <h3>Cast</h3>
+            <p>Johnny depp, Samantha Williams, Aaron Shaun </p>
+            <h3>Plot</h3>
+            <p>The film explores Bruce Banner's origins. After a lab accident involving gamma radiation, he transforms into a giant, green-skinned creature known as the "Hulk" whenever stressed or emotionally provoked. The United States military pursues him, and he clashes with his biological father, who has dark plans for his son. </p>
+            <h3>IMDB Rating</h3>
+            <p class="stars">5.6/10
+                <span >
+                    <i class="ri-star-fill star"></i>
+                    <i class="ri-star-fill star"></i>
+                    <i class="ri-star-half-fill star"></i>
+                    <i class="ri-star-line star"></i>
+                    <i class="ri-star-line star"></i>
+                </span>
+            </p>
+            
+        </div>
+    </div>
+    <footer>
+        <div class="footer-left">
+
+        </div>
+        <div class="footer-right">
+            <h1>
+                <i class="ri-guide-line"></i>FilmGuide
+            </h1>
+            <p>The true guide to all your movies</p>
+            <p>All right reserved by the respective owner of the website.</p>
+        </div>
+    </footer>
+    <div class="loader-container">
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
