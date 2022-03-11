@@ -231,6 +231,21 @@ const searchMovies = async (e) => {
 
 
 
+document.getElementById('nav-to-top').addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'})
+})
+
+
+window.onscroll = function() {scrollToTop()};
+
+function scrollToTop() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("nav-to-top").className = "nav-to-top";
+  } else {
+    document.getElementById("nav-to-top").className = "";
+  }
+}
+
 
 poster(LATEST_URL)
 movies.fetchMovies(POPULAR_URL)

@@ -144,6 +144,7 @@ nav ul li:hover{
 
 .main-body{
     display: flex;
+    position: relative;
     align-items: center;
     flex-wrap: wrap;
     flex-direction: column;
@@ -222,18 +223,27 @@ nav ul li:hover{
 }
 
 
+.nav-to-top{
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    font-size: 32px;
+    z-index: 99;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 10px;
+    border: none;
+    display: flex;
+    align-items: center;justify-content: center;
+    animation: bounce 3s infinite linear;
+    transition: 200ms linear;
+    cursor: pointer;
+}
 
-@keyframes change {
-    0%{
-        transform: scale(1,1);
-    }
-    50%{
-        transform: scale(1.1,1.1);
-    }
-    100%{
-        transform: scale(1,1);
-
-    }
+.nav-to-top:hover{
+    color: black;
+    background: white;
 }
 
 
@@ -486,7 +496,7 @@ overflow: hidden;
 
 
 footer{
-    width: 100vw;
+    width: calc(100vw - 50px);
     background: #000d16;
     display: flex;
     align-items: center;
@@ -506,6 +516,9 @@ footer p:nth-child(3){
     letter-spacing: 5px;
     padding-top: 30px;
 }
+
+
+
 
 @media screen and (max-width:1250px) {
     nav ul {
@@ -539,4 +552,22 @@ footer p:nth-child(3){
         right: 45%;
     }
     
+}
+
+
+@media screen and (max-width:480px){
+    .poster h1{
+        font-size: 36px;
+        padding: 10px;
+    }
+
+    .modal h2{
+        font-size: 36px;
+    }
+    .modal h3{
+        font-size: 24px;
+    }
+    .modal p{
+        font-size: 18px;
+    }
 }
